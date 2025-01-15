@@ -11,7 +11,7 @@ MESSAGE_TYPE_REQUEST = 0x03
 MESSAGE_TYPE_PAYLOAD = 0x04
 
 
-def build_payload_packet(total_segments, current_segment, payload_size = 1024) -> bytes:
+def build_payload_packet(total_segments, current_segment, payload_size = 1024):
 
     header = struct.pack("!IbQQ", MAGIC_COOKIE, MESSAGE_TYPE_PAYLOAD, total_segments, current_segment)
     payload_data = b"x" * payload_size
@@ -93,7 +93,7 @@ def handle_udp_client(udp_socket: socket.socket, client_address: tuple, file_siz
 
 
 
-def handle_udp_requests(udp_socket: socket.socket) -> None:
+def handle_udp_requests(udp_socket: socket.socket):
 
     while True:
         try:
