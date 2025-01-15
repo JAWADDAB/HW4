@@ -111,7 +111,7 @@ def handle_udp_transfer(server_ip, udp_port, file_size, transfer_id):
             udp_socket.close()
 
 
-def main() -> None:
+def main() :
 
     try:
         while True:
