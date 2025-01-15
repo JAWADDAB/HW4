@@ -115,7 +115,7 @@ def main() -> None:
 
     try:
         while True:
-   
+
             file_size, num_tcp, num_udp = None, None, None
             try:
                 # File Size
@@ -131,7 +131,7 @@ def main() -> None:
                     num_tcp = int(num_tcp_input)
                 else:
                     print("Invalid number of TCP connections. Please enter a positive integer.")
-                    file_size = None 
+                    file_size = None
 
                 # Number of UDP Connections
                 num_udp_input: str = input("Enter number of UDP connections: ")
@@ -139,7 +139,7 @@ def main() -> None:
                     num_udp = int(num_udp_input)
                 else:
                     print("Invalid number of UDP connections. Please enter a positive integer.")
-                    file_size = None  
+                    file_size = None
 
             except Exception as e:
                 print(f"[Client] Error reading input: {e}")
@@ -150,8 +150,8 @@ def main() -> None:
 
 
             server_ip: str = "127.0.0.1"
-            udp_port_input: str = "61672"
-            tcp_port_input: str = "57725"
+            udp_port_input: str = "4444"
+            tcp_port_input: str = "3333"
             print("Client started, listening for offer requests...")
 
             # Validate port inputs
